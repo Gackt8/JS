@@ -1,0 +1,25 @@
+using System;
+
+namespace Lab1
+{
+	public class Program
+	{
+		public static void Main(string[] args)
+		{
+			A clasA = new A();
+			Console.WriteLine(clasA.c);
+		}
+	}
+	
+	class A
+	{
+		private decimal a = 9.45m;
+		private decimal b = 3.29m;
+		
+		public decimal c
+		{
+			get { return a - b; }
+			set { value++; }
+		}
+	}
+}
