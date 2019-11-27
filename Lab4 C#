@@ -2,52 +2,54 @@ using System;
 					
 public class Program
 {
-	public static void Main()
+	public static void Main(string[] args)
 	{
-    var classB = new B();
-    for (int i = 0; i < 10; i++)
-    {
-        Console.Write("{0} ",classB[i]);
-    }
-    Console.WriteLine();
-    for (int i = 0; i < 10; i++)
-    {
-        Console.Write("{0} ", classB[(short)i]);
-    }
-    Console.WriteLine();
+		var classB = new B();
+		for (int i = 0; i < 10; i++)
+		{
+			Console.Write("{0} ",classB[i]);
+		}
+			
+    	Console.WriteLine();
+    	for (int i = 0; i < 10; i++)
+    	{
+        	Console.Write("{0} ", classB[(short)i]);
+    	}
+    	Console.WriteLine();
  
-    C<string>.F = "строка";
-    C<int>.F = 10;
-    Console.WriteLine("{0} {1}", C<string>.F, C<int>.F);
+    	C<string>.F = "строка";
+    	C<int>.F = 10;
+    	Console.WriteLine("{0} {1}", C<string>.F, C<int>.F);
 
 	}
 }
 
-class B
-{
-    Int32[] m1;
-    Int32[] m2 = new Int32[] { 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 };
+	class B
+	{
+		Int32[] m1;
+    		Int32[] m2 = new Int32[] { 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 };
  
-    public B()
-    {
-        m1 = new Int32[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-    }
+    		public B()
+    		{
+        		m1 = new Int32[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+    		}
  
-    public Int32 this[Int32 index]
-    {
-        set { m1[index] = value; }
-        get { return m1[index]; }
-    }
+    		public Int32 this[Int32 index]
+    		{
+        		set { m1[index] = value; }
+        		get { return m1[index]; }
+    		}
  
-    public Int32 this[short index2]
-    {
-        set { m2[index2] = value; }
-        get { return m2[index2]; }
-    }
+    		public Int32 this[short index2]
+    		{
+        		set { m2[index2] = value; }
+        		get { return m2[index2]; }
+    		}
  
-}
+	}
  
-class C<T>
-{
-    static public T F;
-}
+	class C<T>
+	{
+    		static public T F;
+	}
+
