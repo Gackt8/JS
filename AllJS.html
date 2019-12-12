@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторные работы</title>
+    <script src="AllJS.js"></script>
+</head>
+<body>
+    <div>
+        <div id="lab1">
+            <h1>Задание №1</h1>
+            <hr>
+            <input type="number" id="input_1" step="0.2" placeholder="Введите Х"> <br>
+            <button id="button_1" onclick="lab1()">Ввод</button>
+            <span id="ans1">
+                <p>Ответ: <output id="out_1">0</output></p>
+            </span>
+        </div>
+        <div id="lab2">
+            <h1>Задание №2</h1>
+            <hr>
+            <table id="table_1">
+                <tr>
+                    <p>Введите массу трёх гирь!</p>
+                </tr>
+                <tr>
+                <th><input type="number" id="input_2_1" step="0.1" placeholder="Масса первой гири"></th>
+                <th><input type="number" id="input_2_2" step="0.1" placeholder="Масса второй гири"></th>
+                <th><input type="number" id="input_2_3" step="0.1" placeholder="Масса третей гири"></th>
+                </tr>
+            </table>
+            <button id="button_2" onclick="lab2()">Ввод</button>
+            <p>Максимальное значение: <output id="out_2_2"></output> <br>Минимальное значение: <output id="out_2_1"></output>
+                <br> Cумма масс: <output id="out_2_3"> </output></p>
+        </div>
+        <div id="lab3">
+            <h1>Задание №3</h1>
+            <hr>
+            <p>Введите вашу фамилию!</p>
+            <input type="text" placeholder="Фамилия" id="input_3">
+            <button id="button_3" onclick="lab3()">Ввод</button>
+            <p>Гласные: <output id="output_3_1">0</output>; Согласные: <output id="output_3_2">0</output></p>
+        </div>
+        <div id="lab4">
+            <h1>Задание №4</h1>
+            <input type="text" maxlength="20" id="input_4">
+            <button id="button_4" onclick="lab4()">Ввод</button>
+            <p>Количество повторений пятого знака:<output id="output_4"></output></p>
+            <hr>
+        </div>
+        <div id="lab5">
+            <h1>Задание №5</h1>
+            <hr>
+            <p>Введите два числа</p>
+            <input type="number" id="input_5_1">
+            <input type="number" id="input_5_2"><br>
+            <input type="radio" name="radio" id="r1">1) Сложение;<br>
+            <input type="radio" name="radio" id="r2">2) Вычитание;<br>
+            <input type="radio" name="radio" id="r3">3) Умножение;<br>
+            <input type="radio" name="radio" id="r4">4) Деление.<br>
+            <button id="button_5" onclick="lab5()">Ввод</button>
+            <p>Ваш ответ: <output id="output_5">0</output>.</p>
+        </div>
+        <div id="lab6">
+            <h1>Задание №6</h1>
+            <hr>
+            <p> Напряжение:
+                <input type="number" id="input_6_1">
+                Сила тока:
+                <input type="number" id="input_6_2">
+            </p>
+            <button id="button_6" onclick="lab6()">Ввод</button>
+            <p>Сопротивление на участке цепи равно: <output id="output_6">0</output> .</p>
+        </div>
+        <div id="lab7">
+            <h1>Задание №7</h1>
+            <hr>
+            <p>Введите эквивалентное сопротивление: </p>
+                <input type="number" id="input_7_1">
+                Введите количество резисторов:
+                <input type="number" id="input_7_2">
+            </p>
+            <button id="button_7" onclick="lab7()">Ввод</button>
+            <p>При последовательном соединении: <output id="output_7_1">0</output></p>
+            <p>При параллельном соединении: <output id="output_7_2">0</output></p>
+        </div>
+        <div id="lab8">
+            <h1>Задание №8</h1>
+            <hr>
+            <p>Введите последовательность слов:</p>
+            <input type="text" id="inp_8"><br><br>
+            <button id="button_8" onclick="lab8()">Ввод</button>
+            <p><output id="out_8"></output></p>
+        </div>
+        <div id="9">
+            <h1>Задание №9</h1>
+            <hr>
+            <p>Текущее время</p>
+            <button id="button_9" onclick="lab9()">Ввод</button>
+            <p>Время <output id="out_9"></output>.</p>
+        </div>
+        <div id="lab10">
+            <h1>Задание №10</h1>
+            <hr>
+            <p>Введите период от какого и до какого числа искать простые числа</p>
+            <input type="number" id="inp_10_1"><input type="number" id="inp_10_2">
+            <button id="button_10" onclick="lab10()">Ввод</button>
+            <p>Количество простых чисел в промежутке от 2 до 10 равно: <output id="out_10"></output></p>
+        </div>
+        <div id="lab11">
+            <h1>Задание №11</h1>
+            <hr>
+            <p>Введите текст:</p>
+            <input type="text" id="inp_11"><br><br>
+            <button id="button_11" onclick="lab11()">Ввод</button>
+            <p>Количество слов: <output id="out_11_1"></output></p>
+            <p>Максимальная длина слова: <output id="out_11_2"></output></p>
+            <p>Минимальная длина слова: <output id="out_11_3"></output></p>
+            <p>Среднее значение длины слова: <output id="out_11_4"></output></p>
+        </div>
+        <div id="lab12">
+            <h1>Задание №12</h1>
+            <hr>
+            <p>Слово палиндром:</p>
+            <input id="inp_12"><br><br>
+            <button id="button_12" onclick="lab12()">Ввод</button>
+            <p><output id="out_12"></output></p>
+        </div>
+        <div id="lab13">
+            <h1>Задание №13</h1>
+            <hr>
+            <p>Введите ваш email!</p>
+            <input text="email" id="inp_13">
+            <button id="button_13" onclick="lab13()">Ввод</button>
+            <p><output id="out_13"></output></p>
+        </div>
+        <div id="lab14">
+            <h1>Задание №14</h1>
+            <hr>
+            <p>Введите X</p><input type="number" id="inp_14_1">
+            <p>Введите Y</p><input type="number" id="inp_14_2">
+            <p>Введите R</p><input type="number" id="inp_14_3"><br><br>
+            <button id="button_14" onclick="lab14()">Ввод</button><p><output id="out_14"></output></p>
+        </div>
+        <div id="lab15">
+            <h1>Задание №15</h1>
+            <hr>
+            <p>Вывести значения функции Y = 4 * SIN (T) - 0.5 * SIN (T) на промежутке [0.1, 0.8], с шагом 0.05.</p>
+            <button id="button_15" onclick="lab15()">Ввод</button>
+            <p><output id="out_15"></output></p>
+        </div>
+        <div id="lab 16">
+            <h1>Задание №16</h1>
+            <hr>
+            <p>Введите начальную скорость: </p>
+            <input type="number" id="inp_16_1">
+            <p>Введите время полета тела: </p>
+            <input type="number" id="inp_16_2"><br><br>
+            <button id="button_16" onclick="lab16()">Ввод</button>
+            <p>Угол: <output id="out_16"></output></p>
+        </div>
+        <div id="lab17">
+            <h1>Задание №17</h1>
+            <hr>
+            <p>Введите известные стороны треугольника:</p>
+            <input type="number" id="inp_17_1"><br><br>
+            <input type="number" id="inp_17_2"><br><br>
+            <input type="number" id="inp_17_3"><br>
+            <p>Введите известные улгы треугольника</p>
+            <input type="number" id="inp_17_4"><br><br>
+            <input type="number" id="inp_17_5"><br><br>
+            <input type="nubmer" id="inp_17_6"><br>
+            <p>Выберете по какому из способу расчитывать площадь: <br>
+                1 - Площадь по трём сторонам равна;<br>
+                2 - Площадь по трём углам и стороне равна;<br>
+                3 - Площадь по двум сторонам и углу между ними равна;<br>
+                4 - Площадь по двум сторонам и необразованному ими углу равна;<br>
+                5 - Площадь по высоте треугольника и стороне к которой опущена эта высота равна;<br></p>
+                <input type="number" id="inp_17_7"><br><br>
+            <button id="button_17" onclick="lab17()">Ввод</button>
+            <p><output id="out_17"></output></p>
+        </div>
+        <div id="lab18">
+            <h1>Задание №18</h1>
+            <hr>
+            <p>Введите количество элементов Числа Фибоначчи.</p>
+            <input type="number" id="inp_18">
+            <button id="button_18" onclick="lab18()">Ввод</button>
+            <p>Число Фибоначчи = <output id="out_18"></output></p>
+        </div>
+        <div id="lab19">
+            <h1>Задание №19</h1>
+            <hr>
+            <p>Введите строку: </p>
+            <input type="text" id="inp_19">
+            <button id="button_19" onclick="lab19()">Ввод</button>
+            <p><output id="out_19"></output></p>
+        </div>
+        <div id="lab20">
+            <h1>Задание №20</h1>
+            <hr>
+            <p>Введите количество элементов: </p>
+            <input type="number" id="inp_20">
+            <button id="button_20" onclick="lab20()">Ввод</button>
+            <p>Элементы: <output id="out_20_1"></output>Сумма элементов: <output id="out_20_2"></output></p>
+        </div>
+    </div>
+</body>
+</html>
