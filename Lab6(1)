@@ -38,7 +38,35 @@ class Human : IComparable<Human> {
                 return 0;
         }
 	
+
 }
+	
+   class Student : Human {
+	   public int math {get; set;}
+	   public int physics {get; set;}
+	   public int history {get; set;}
+	   
+	   public Student(string surname, DateTime birthDay, string status, int math, int physics, int history) :
+		base(surname, birthDay, status)
+		{
+			this.math = math;
+			this.physics = physics;
+			this.history = history;
+		}
+	   
+		public int mid
+		{
+			get { return (math + physics + history)/3; }
+			set { mid = value; }
+		}
+	   
+	    public override string ToString() 
+        {   
+		  int age = DateTime.Now.Year - this.birthDay.Year;
+          return string.Format("Фамилия: {0}\nВозраст: {1}\nСтатус: {2}\nОценка: {3}", this.surname, age, this.status, this.mid);
+        }
+	   
+   }
 	
 	
 
@@ -50,9 +78,8 @@ class Human : IComparable<Human> {
 			
 			dic.Add(new Human());
 			dic.Add(new Human("Александриева", new DateTime(1999, 07, 10), "Студент"));
-      dic.Add(new Human("Еленская", new DateTime(1995, 01, 01), "Студент"));
+            dic.Add(new Human("Еленская", new DateTime(1995, 01, 01), "Студент"));
 			
-
 			Console.WriteLine("Список людей: \n");
             foreach (Human a in dic)
                 Console.WriteLine(a);
@@ -62,7 +89,19 @@ class Human : IComparable<Human> {
             foreach (Human a in dic)
                 Console.WriteLine(a);
 
+			List<Student> dis = new List<Student>();
 
+			dis.Add(new Student("Александриева", new DateTime(1999, 07, 10), "Студент", 7, 5, 6));
+            dis.Add(new Student("Еленская", new DateTime(1995, 01, 01), "Студент", 8, 9, 7));
+
+			Console.WriteLine("Список людей: \n");
+            foreach (Student b in dis)
+                Console.WriteLine(b);
+			
+			Console.WriteLine("\nСортировка по возрасту: \n");
+            dis.Sort();
+            foreach (Student b in dis)
+                Console.WriteLine(b);
         }
     	}
 }
