@@ -1,0 +1,68 @@
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApplication1
+{
+	
+class Human : IComparable<Human> {
+	public string surname {get; set;}
+	public DateTime birthDay {get; set;}
+	public string status {get; set;}
+
+	public Human(string surname, DateTime birthDay, string status){
+		this.surname = surname;
+		this.birthDay = birthDay;
+		this.status = status;
+	}
+	
+	public Human(){
+		surname = "null";
+		birthDay = DateTime.Today;
+		status = "null";
+	}
+	
+	
+      public override string ToString() 
+        {   
+		  int age = DateTime.Now.Year - this.birthDay.Year;
+            return string.Format("Фамилия: {0}\nВозраст: {1}\nСтатус: {2}\n", this.surname, age, this.status);
+        }
+
+        public int CompareTo(Human obj)
+        {
+            if (this.birthDay > obj.birthDay)
+                return 1;
+            if (this.birthDay < obj.birthDay)
+                return -1;
+            else
+                return 0;
+        }
+	
+}
+	
+	
+
+	public class Program
+	{
+		public static void Main(string[] args)
+		{
+			List<Human> dic = new List<Human>();
+			
+			dic.Add(new Human());
+			dic.Add(new Human("Александриева", new DateTime(1999, 07, 10), "Студент"));
+      dic.Add(new Human("Еленская", new DateTime(1995, 01, 01), "Студент"));
+			
+
+			Console.WriteLine("Список людей: \n");
+            foreach (Human a in dic)
+                Console.WriteLine(a);
+			
+			Console.WriteLine("\nСортировка по возрасту: \n");
+            dic.Sort();
+            foreach (Human a in dic)
+                Console.WriteLine(a);
+
+
+        }
+    	}
+}
