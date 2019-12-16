@@ -11,4 +11,4 @@ Vue.filter('capitalize', function (value) {
 
 new Vue({
   render: h => h(App)
-}).$mount('#app')
+}).$mount('#app') // монтируем в #app
