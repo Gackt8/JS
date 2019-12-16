@@ -3,7 +3,6 @@ import App from './App.vue'
 import VueGeolocation from 'vue-browser-geolocation'
 
 Vue.use(VueGeolocation)
-Vue.config.productionTip = false
 Vue.filter('capitalize', function (value) {
   if (!value) return ''
   value = value.toString()
