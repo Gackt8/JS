@@ -16,11 +16,6 @@ export default {
     return {
       date: new Date()
     }
-  },
-  computed: {
-    year () {
-      return this.date.getFullYear()
-    }
   }
 }
 </script>
@@ -36,7 +31,6 @@ export default {
     color: #2c3e50;
   }
   .container {
-    background: #372bff;
     background: radial-gradient(ellipse at top, #433be6, transparent),
     radial-gradient(ellipse at bottom, #4d9f0c, transparent);
     position: fixed; /* or absolute */
