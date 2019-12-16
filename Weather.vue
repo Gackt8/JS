@@ -116,11 +116,6 @@ export default {
 </script>
 
 <style scoped>
-  section {
-    padding-top: 30px;
-    min-height: 400px;
-    text-align: left;
-  }
   th, td {font-size: 1.1rem;}
   td {padding-left: 10px; color: rgb(97, 229, 231)
   }
